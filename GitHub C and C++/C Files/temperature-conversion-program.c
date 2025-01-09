@@ -15,9 +15,11 @@ int main() {
 
     printf("Is the temperature in (C), (F) or (K) ?\n");
     scanf("%c",&temperatureUnit);
+    while(getchar() != '\n'); //Clear buffer
+
     printf("What's the value of the temperature?");
     scanf("%f", &temperatureValue);
-    while (getchar() !=)
+    while (getchar() != '\n'); // Clear buffer
 
 
 
@@ -37,6 +39,7 @@ int main() {
         case 'C':
             printf("To which temperature you want to convert it?\n");
             scanf("%c",&convertTo);
+            while (getchar() != '\n');
 
             switch(convertTo){
                 case 'C':
@@ -61,6 +64,7 @@ int main() {
         case 'F':
             printf("To which temperature you want to convert it?\n");
             scanf("%c",convertTo);
+            while (getchar() != '\n');
 
             switch(convertTo) {
                 case 'C':
@@ -85,6 +89,7 @@ int main() {
         case 'K':
             printf("To which temperature you want to convert it?\n");
             scanf("%c",convertTo);
+            while (getchar() != '\n');
 
             switch(convertTo){
 
@@ -106,7 +111,10 @@ int main() {
 
             }
 
+        
         break;
+
+       
     }
 
 
