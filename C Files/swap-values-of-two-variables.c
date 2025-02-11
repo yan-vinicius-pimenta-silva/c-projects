@@ -9,10 +9,10 @@ int main() {
 
     strcpy(temp, x);
     strcpy(x,y);
-    strcpy(y,temp);
+    strcpy(y,temp); 
 
 
-    // temp = x;
+    // temp = x; 
     // x = y;
     // y = temp;
 
