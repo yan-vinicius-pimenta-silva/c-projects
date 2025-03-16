@@ -1,4 +1,14 @@
 #include <stdio.h>
+<<<<<<< HEAD
+
+int main(){
+
+  
+
+
+  return 0;
+}
+=======
 #include <stdlib.h>
 #include <math.h>
 
@@ -28,3 +38,4 @@ printf("%d nota(s) de R$ 1,00\n",n1);
 
     return 0;
 }
+>>>>>>> 55ebc8876db74fff13f0073c37443e027aeb3d92
