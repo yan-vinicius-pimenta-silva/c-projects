@@ -1,63 +1,28 @@
 #include <stdio.h>
+#include <string.h>  // Para usar strlen()
 
+int main() {
+    char palavra[100];
+    int contador = 0;
 
+    printf("Digite uma palavra: ");
+    fgets(palavra, sizeof(palavra), stdin);
 
-int main()
+    // Remove o caractere de nova linha (\n) se estiver presente
+    palavra[strcspn(palavra, "\n")] = '\0';
 
-{
+    // Contar as vogais
+    for (int i = 0; i < strlen(palavra); i++) {
+        // Verificar se o caractere é uma vogal
+        char c = palavra[i];
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' ||
+            c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
+            contador++;  // Se for uma vogal, incrementa o contador
+        }
+    }
 
-   //nested loop = a loop inside of another loop
+    // Exibir a quantidade de vogais
+    printf("Quantidade de vogais: %d\n", contador);
 
-
-
-   int rows;
-
-   int columns;
-
-   char symbol;
-
-
-
-   printf("\nEnter # of rows: ");
-
-   scanf("%d", &rows);
-
-
-
-   printf("Enter # of columns: ");
-
-   scanf("%d", &columns);
-
-
-
-   scanf("%c"); //clears \n from buffer
-
-
-
-   printf("Enter a symbol to use: ");
-
-   scanf("%c", &symbol);
-
-
-
-   for(int i = 1; i <= rows; i++)
-
-   {
-
-      for(int j = 1; j <= columns; j++)
-
-      {
-
-         printf("%d", j);
-
-      }
-
-      printf("\n");
-
-   }
-
-
-
-   return 0;
-
+    return 0;
 }
